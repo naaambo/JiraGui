@@ -31,6 +31,8 @@ namespace JiraGUI
 	public partial class MainWindow : MetroWindow
 	{
 
+		public string link;
+
 		public MainWindow()
 		{
 			InitializeComponent();
@@ -88,26 +90,33 @@ namespace JiraGUI
 			string inputKey = txtInput.Text;
 			RunASync(inputKey).ContinueWith(r =>
 				{
-					Console.WriteLine("first >" + r.Result);
 					result = r.Result;
 					Console.WriteLine(result);
 					this.Dispatcher.Invoke(() =>
 						{
 							txtOutput.Text = result.Key + "\n" + result.MyFields.Summary;
 							txtMore.Text = result.MyFields.Description;
+							link = "https://icsasoftware.atlassian.net/browse/" + result.Key;
 							Clipboard.SetText(txtOutput.Text);
+
 						});
 
 			});
+		}
+
+		private void GoToTicket(object sender, RoutedEventArgs e)
+		{
+			System.Diagnostics.Process.Start(link);
+
 		}
 
 		private void SelectAll(object sender, RoutedEventArgs e)
 		{
 			this.Dispatcher.Invoke(() =>
 				                       {
-										   //Unboxing.
-										   ((TextBox)sender).SelectAll();
-					                       ((TextBox)sender).Focus();
+										//Unboxing.
+										((TextBox)sender).SelectAll();
+					                    ((TextBox)sender).Focus();
 				                       });
 		}
 

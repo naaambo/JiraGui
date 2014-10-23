@@ -4,35 +4,20 @@
 		xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
 		xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
 		xmlns:mui="http://firstfloorsoftware.com/ModernUI" mc:Ignorable="d"
-		Title="JIRA" SizeToContent="WidthAndHeight"  Visibility="Visible" BorderBrush="#FF919191" Opacity="0.99" Height="Auto" Width="Auto" >
+		Title="JIRA" SizeToContent="WidthAndHeight"  Visibility="Visible" BorderBrush="#FF919191" Opacity="0.99" Height="393.358" Width="644.575" ResizeMode="CanMinimize" >
 
 	<Window.Resources>
 		<BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter"></BooleanToVisibilityConverter>
 	</Window.Resources>
 
-	<Grid Margin="-9.333,9.5,-6,0.167" Height="179" Width="641">
-		<Grid.RowDefinitions>
-			<RowDefinition Height="142*"/>
-			<RowDefinition Height="Auto"/>
-			<RowDefinition Height="10*"/>
-			<RowDefinition Height="15*"/>
-		</Grid.RowDefinitions>
-		<Grid.ColumnDefinitions>
-			<ColumnDefinition Width="Auto"/>
-			<ColumnDefinition Width="Auto"/>
-			<ColumnDefinition Width="0*"/>
-			<ColumnDefinition Width="Auto"/>
-			<ColumnDefinition Width="Auto"/>
-			<ColumnDefinition Width="Auto"/>
-			<ColumnDefinition Width="Auto"/>
-			<ColumnDefinition Width="Auto"/>
-			<ColumnDefinition Width="0*"/>
-			<ColumnDefinition Width="569*"/>
-			<ColumnDefinition Width="127*"/>
-		</Grid.ColumnDefinitions>
-		<TextBox x:Name="txtInput" Padding="2" GotKeyboardFocus="SelectAll"  GotMouseCapture="SelectAll" GotFocus="SelectAll"  HorizontalAlignment="Center" Height="29" TextWrapping="Wrap" Text="Enter Issue Number" KeyDown="OnKeyDownHandler" VerticalAlignment="Center" Width="510" TextAlignment="Center" FontFamily="Segoe UI Light" BorderThickness="1" FontSize="12" Margin="93,0,92,123" Grid.Column="8" Grid.ColumnSpan="3" />
-		<TextBox x:Name="txtOutput"  Padding="2" Background="White" BorderThickness="1" IsReadOnly="True" TextWrapping="Wrap" FontFamily="Segoe UI" TextAlignment="Center" HorizontalAlignment="Center" Width="510" Height="72" VerticalAlignment="Center" FontSize="13.333" BorderBrush="#FFD1D0D0" Margin="93,47,92,0" Grid.Column="8" Grid.ColumnSpan="3"/>
-		<ToggleButton x:Name="Toggle" Content="More" Grid.Column="8" HorizontalAlignment="Center" Margin="248,0,144,1" VerticalAlignment="Center" Width="132" Height="26" Grid.RowSpan="2" Background="White" Grid.ColumnSpan="2" Grid.Row="2"/>
-		<TextBox x:Name="txtMore" Visibility="{Binding IsChecked, ElementName=Toggle, Converter={StaticResource BooleanToVisibilityConverter}}" IsReadOnly="True" ScrollViewer.VerticalScrollBarVisibility="Auto" ScrollViewer.HorizontalScrollBarVisibility="Disabled" Grid.Column="8" HorizontalAlignment="Left" Height="148" TextWrapping="Wrap" VerticalAlignment="Top" Width="510" Grid.Row="3" Margin="93,0,0,-132" Grid.ColumnSpan="3" />
+	<Grid>
+
+		<TextBox x:Name="txtInput" Padding="2" GotKeyboardFocus="SelectAll"  GotMouseCapture="SelectAll" GotFocus="SelectAll"  HorizontalAlignment="Center" Height="27" TextWrapping="Wrap" Text="Enter Issue Number" KeyDown="OnKeyDownHandler" VerticalAlignment="Center" Width="510" TextAlignment="Center" FontFamily="Segoe UI Light" BorderThickness="1" FontSize="12" Margin="65,11,64,325" />
+		<TextBox x:Name="txtOutput"  Padding="2" Background="White" BorderThickness="1" IsReadOnly="True" TextWrapping="Wrap" FontFamily="Segoe UI" TextAlignment="Center" HorizontalAlignment="Center" Width="510" Height="68" VerticalAlignment="Center" FontSize="13.333" BorderBrush="#FFD1D0D0" Margin="65,67,64,228"/>
+
+		<TextBox x:Name="txtMore"  IsReadOnly="True" ScrollViewer.VerticalScrollBarVisibility="Auto" ScrollViewer.HorizontalScrollBarVisibility="Disabled" HorizontalAlignment="Left" Height="148" TextWrapping="Wrap" VerticalAlignment="Top" Width="510" Margin="65,163,0,0" />
+		<Label Content="Description:" HorizontalAlignment="Left" Margin="65,140,0,0" VerticalAlignment="Top" FontFamily="Segoe UI"/>
+		<Label Content="Summary:" HorizontalAlignment="Left" Margin="65,44,0,0" VerticalAlignment="Top" FontFamily="Segoe UI"/>
+		<Label MouseDoubleClick="GoToTicket" Content="Go To Ticket" HorizontalAlignment="Left" Margin="518,143,0,0" VerticalAlignment="Top" Width="111" FontSize="9" FontFamily="Segoe UI" Foreground="#FF0B90AE"/>
 	</Grid>
 </Controls:MetroWindow>
