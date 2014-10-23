@@ -7,6 +7,7 @@ using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
 using JiraGUI;
+using MahApps.Metro.Controls;
 using Newtonsoft.Json;
 using System.Collections.Generic;
 using System.Linq;
@@ -27,9 +28,8 @@ namespace JiraGUI
 	/// <summary>
 	/// Interaction logic for MainWindow.xaml
 	/// </summary>
-	public partial class MainWindow : Window
+	public partial class MainWindow : MetroWindow
 	{
-
 
 		public MainWindow()
 		{
@@ -73,6 +73,14 @@ namespace JiraGUI
 
 		}
 
+		private void OnKeyDownHandler(object sender, KeyEventArgs e)
+		{
+			if (e.Key == Key.Return)
+			{
+				ButtonClick(sender,e);
+			}
+		}
+
 		private void ButtonClick(object sender, RoutedEventArgs e)
 		{
 			Issue result;
@@ -86,12 +94,22 @@ namespace JiraGUI
 					this.Dispatcher.Invoke(() =>
 						{
 							txtOutput.Text = result.Key + "\n" + result.MyFields.Summary;
+							txtMore.Text = result.MyFields.Description;
+							Clipboard.SetText(txtOutput.Text);
 						});
 
 			});
-
-
-
 		}
+
+		private void SelectAll(object sender, RoutedEventArgs e)
+		{
+			this.Dispatcher.Invoke(() =>
+				                       {
+										   //Unboxing.
+										   ((TextBox)sender).SelectAll();
+					                       ((TextBox)sender).Focus();
+				                       });
+		}
+
 	}
 }

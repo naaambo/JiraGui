@@ -19,3 +19,11 @@ D:\JiraGUI\JiraGUI\bin\Debug\Newtonsoft.Json.xml
 D:\JiraGUI\JiraGUI\bin\Debug\System.Net.Http.Formatting.xml
 D:\JiraGUI\JiraGUI\bin\Debug\System.Web.Http.xml
 D:\JiraGUI\JiraGUI\bin\Debug\System.Web.Http.WebHost.xml
+D:\JiraGUI\JiraGUI\obj\Debug\ucSpinnerDotCircle.baml
+D:\JiraGUI\JiraGUI\obj\Debug\ucSpinnerDotCircle.g.cs
+D:\JiraGui\JiraGUI\bin\Debug\MetroFramework.dll
+D:\JiraGui\JiraGUI\bin\Debug\Microsoft.Windows.Shell.dll
+D:\JiraGui\JiraGUI\bin\Debug\MahApps.Metro.dll
+D:\JiraGui\JiraGUI\bin\Debug\System.Windows.Interactivity.dll
+D:\JiraGui\JiraGUI\bin\Debug\MahApps.Metro.xml
+D:\JiraGui\JiraGUI\obj\Debug\App.baml
