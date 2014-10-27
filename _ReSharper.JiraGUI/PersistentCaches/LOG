@@ -1,5 +1,5 @@
-2014/10/23-16:47:06.400 1588 Recovering log #45
-2014/10/23-16:47:06.400 1588 Level-0 table #47: started
-2014/10/23-16:47:06.403 1588 Level-0 table #47: 10472 bytes OK
-2014/10/23-16:47:06.406 1588 Delete type=0 #45
-2014/10/23-16:47:06.406 1588 Delete type=3 #43
+2014/10/27-16:07:43.004 bbc Recovering log #54
+2014/10/27-16:07:43.004 bbc Level-0 table #57: started
+2014/10/27-16:07:43.006 bbc Level-0 table #57: 244 bytes OK
+2014/10/27-16:07:43.009 bbc Delete type=0 #54
+2014/10/27-16:07:43.009 bbc Delete type=3 #52

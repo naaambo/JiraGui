@@ -6,18 +6,15 @@
 		xmlns:mui="http://firstfloorsoftware.com/ModernUI" mc:Ignorable="d"
 		Title="JIRA" SizeToContent="WidthAndHeight"  Visibility="Visible" BorderBrush="#FF919191" Opacity="0.99" Height="393.358" Width="644.575" ResizeMode="CanMinimize" BorderThickness="1" >
 
-	<Window.Resources>
-		<BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter"></BooleanToVisibilityConverter>
-	</Window.Resources>
-
 	<Grid>
 
-		<TextBox x:Name="txtInput" Padding="2" GotKeyboardFocus="SelectAll"  GotMouseCapture="SelectAll" GotFocus="SelectAll"  HorizontalAlignment="Center" Height="27" TextWrapping="Wrap" Text="Enter Issue Number" KeyDown="OnKeyDownHandler" VerticalAlignment="Center" Width="510" TextAlignment="Center" FontFamily="Segoe UI Light" BorderThickness="1" FontSize="12" Margin="65,11,64,325" />
+		<TextBox x:Name="txtInput" Padding="2" GotKeyboardFocus="SelectAll"  GotMouseCapture="SelectAll" GotFocus="SelectAll"  HorizontalAlignment="Center" Height="27" TextWrapping="Wrap" Text="Enter Issue Number" KeyDown="OnKeyDownHandler" VerticalAlignment="Center" Width="436" TextAlignment="Center" FontFamily="Segoe UI Light" BorderThickness="1" FontSize="12" Margin="138,10,63,324" />
 		<TextBox x:Name="txtOutput"  Padding="2" Background="White" BorderThickness="1" IsReadOnly="True" TextWrapping="Wrap" FontFamily="Segoe UI" TextAlignment="Center" HorizontalAlignment="Center" Width="510" Height="68" VerticalAlignment="Center" FontSize="13.333" BorderBrush="#FFD1D0D0" Margin="65,67,64,228"/>
 
 		<TextBox x:Name="txtMore"  IsReadOnly="True" ScrollViewer.VerticalScrollBarVisibility="Auto" ScrollViewer.HorizontalScrollBarVisibility="Disabled" HorizontalAlignment="Left" Height="148" TextWrapping="Wrap" VerticalAlignment="Top" Width="510" Margin="65,163,0,0" />
 		<Label Content="Description:" HorizontalAlignment="Left" Margin="65,140,0,0" VerticalAlignment="Top" FontFamily="Segoe UI"/>
 		<Label Content="Summary:" HorizontalAlignment="Left" Margin="65,44,0,0" VerticalAlignment="Top" FontFamily="Segoe UI"/>
 		<Label MouseDoubleClick="GoToTicket" Content="Go To Ticket" HorizontalAlignment="Left" Margin="518,143,0,0" VerticalAlignment="Top" Width="111" FontSize="9" FontFamily="Segoe UI" Foreground="#FF0B90AE"/>
+		<ComboBox x:Name="cmboProjects" HorizontalAlignment="Left" Margin="65,10,0,0" VerticalAlignment="Top" Width="68" Height="27" Text="BPC" />
 	</Grid>
 </Controls:MetroWindow>
