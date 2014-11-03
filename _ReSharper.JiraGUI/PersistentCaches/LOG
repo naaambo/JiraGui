@@ -1,5 +1,5 @@
-2014/10/27-16:07:43.004 bbc Recovering log #54
-2014/10/27-16:07:43.004 bbc Level-0 table #57: started
-2014/10/27-16:07:43.006 bbc Level-0 table #57: 244 bytes OK
-2014/10/27-16:07:43.009 bbc Delete type=0 #54
-2014/10/27-16:07:43.009 bbc Delete type=3 #52
+2014/11/03-13:57:51.535 131c Recovering log #71
+2014/11/03-13:57:51.535 131c Level-0 table #73: started
+2014/11/03-13:57:51.537 131c Level-0 table #73: 55726 bytes OK
+2014/11/03-13:57:51.541 131c Delete type=0 #71
+2014/11/03-13:57:51.541 131c Delete type=3 #69

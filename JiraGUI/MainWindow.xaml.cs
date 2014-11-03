@@ -9,10 +9,7 @@ using System.Threading.Tasks;
 using JiraGUI;
 using MahApps.Metro.Controls;
 using Newtonsoft.Json;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -31,9 +28,9 @@ namespace JiraGUI
 	public partial class MainWindow : MetroWindow
 	{
 		
-		//TODO Fully implement API class.
-		//TODO Clean Up code (Use List instead of array, messy error catching etc.)
-		//TODO Login
+		//TODO 6. Fully implement API class.
+		//TODO 5. Clean Up code (Use List instead of array, messy error catching etc.)
+		//TODO 1. Change code so only need to add Headers once.
 		//Public String used as the link behind lblLink
 		public string link;
 		public string[] ItemList = {"BPC","BPDL","BPMA","BPWD","FBA","BPAD"}; 
@@ -41,7 +38,7 @@ namespace JiraGUI
 		public MainWindow()
 		{
 			InitializeComponent();
-			//TODO I don't like this :(
+			//TODO 2. I don't like this :(
 			cmboProjects.ItemsSource = ItemList;
 			cmboProjects.SelectedIndex = 0;
 		}
@@ -65,14 +62,14 @@ namespace JiraGUI
 				try
 				{
 					//Appends api link and the ticket number
-					//TODO: Use String.Format Where Needed
+					//TODO 7: Use String.Format Where Needed
 					HttpResponseMessage response = await client.GetAsync("api/2/issue/" + project + "-" + input);
 					var result = response.Content.ReadAsStringAsync().Result;
 					Issue issue = JsonConvert.DeserializeObject<Issue>(result);
 					response.EnsureSuccessStatusCode();
 					return issue;
 				}
-				catch (HttpRequestException e)
+				catch (HttpRequestException)
 				{
 					return null;
 				}
@@ -98,8 +95,8 @@ namespace JiraGUI
 		}
 
 		//Called by OnKeyDownHandler
-		//TODO: Change method names to be accurate
-		//TODO: Check if you can find module names from API
+		//TODO: 4. Change method names to be accurate
+		//TODO: 3. Check if you can find module names from API
 		private void ButtonClick(object sender, RoutedEventArgs e)
 		{
 			Issue result;
@@ -150,6 +147,20 @@ namespace JiraGUI
 										((TextBox)sender).SelectAll();
 					                    ((TextBox)sender).Focus();
 				                       });
+		}
+
+		private void btnLogout_Click(object sender, RoutedEventArgs e)
+		{
+			string output = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
+
+			using (StreamWriter sourceWriter = new StreamWriter(output + "/login.txt"))
+			{
+				sourceWriter.WriteLine();
+			}
+
+			LoginWindow login = new LoginWindow();
+			this.Close();
+			login.Show();
 		}
 
 	}

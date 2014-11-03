@@ -27,3 +27,5 @@ D:\JiraGui\JiraGUI\bin\Debug\MahApps.Metro.dll
 D:\JiraGui\JiraGUI\bin\Debug\System.Windows.Interactivity.dll
 D:\JiraGui\JiraGUI\bin\Debug\MahApps.Metro.xml
 D:\JiraGui\JiraGUI\obj\Debug\App.baml
+D:\JiraGui\JiraGUI\obj\Debug\LoginWindow.baml
+D:\JiraGui\JiraGUI\obj\Debug\LoginWindow.g.cs

@@ -4,7 +4,7 @@
 		xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
 		xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
 		xmlns:mui="http://firstfloorsoftware.com/ModernUI" mc:Ignorable="d"
-		Title="JIRA" SizeToContent="WidthAndHeight"  Visibility="Visible" BorderBrush="#FF919191" Opacity="0.99" Height="393.358" Width="644.575" ResizeMode="CanMinimize" BorderThickness="1" >
+		Title="JIRA" SizeToContent="WidthAndHeight"  Visibility="Visible" BorderBrush="#FF919191" Opacity="0.99" Height="393.358" Width="644.575" ResizeMode="CanMinimize" BorderThickness="2" >
 
 	<Grid>
 
@@ -16,5 +16,6 @@
 		<Label Content="Summary:" HorizontalAlignment="Left" Margin="65,44,0,0" VerticalAlignment="Top" FontFamily="Segoe UI"/>
 		<Label MouseDoubleClick="GoToTicket" Content="Go To Ticket" HorizontalAlignment="Left" Margin="518,143,0,0" VerticalAlignment="Top" Width="111" FontSize="9" FontFamily="Segoe UI" Foreground="#FF0B90AE"/>
 		<ComboBox x:Name="cmboProjects" HorizontalAlignment="Left" Margin="65,10,0,0" VerticalAlignment="Top" Width="68" Height="27" Text="BPC" />
+		<Button x:Name="btnLogout" Content="Logout" HorizontalAlignment="Left" Margin="499,326,0,0" VerticalAlignment="Top" Width="75" Click="btnLogout_Click"/>
 	</Grid>
 </Controls:MetroWindow>

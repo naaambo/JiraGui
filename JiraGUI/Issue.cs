@@ -20,7 +20,6 @@ namespace JiraGUI
 		[JsonProperty("fields")]
 		public Fields MyFields { get; set; }
 
-		//TODO: Get access to Fields:Description
 		public class Fields
 		{
 			[JsonProperty("summary")]
